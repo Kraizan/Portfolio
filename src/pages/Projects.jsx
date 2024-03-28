@@ -23,18 +23,12 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="flex text-center">
-      <div
-        className="w-auto min-h-screen p-20 font-mono text-center underline rotate-180 text-7xl text-neutral-300"
-        style={{
-          writingMode: "vertical-rl",
-        }}
-      >{`Projects`}</div>
-      <div className="grid pr-20 mx-auto lg:grid-cols-4">
+    <section id="projects" className="flex py-10 text-center">
+      <div className="flex flex-wrap justify-between gap-12">
         {projects.map((project) => (
           <ProjectItem key={project.$id} project={project} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

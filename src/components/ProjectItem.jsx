@@ -11,7 +11,7 @@ export default function ProjectItem({ project }) {
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1 }}
-      className="my-20 lg:px-20"
+      className="my-20"
     >
       <AnimatedPin
         title={project.title}
