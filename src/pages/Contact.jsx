@@ -34,73 +34,75 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="z-50 w-full p-4 mx-auto bg-transparent rounded-3xl border-[2px] border-[#66c6e0] md:rounded-2xl md:p-8 shadow-input"
+      className="z-50 bg-transparent rounded-3xl border-[2px] border-[#66c6e0]"
     >
-      <h2 className="text-4xl font-bold text-neutral-200">Let's Connect</h2>
-      <p className="max-w-xl mt-2 text-lg text-neutral-300">
-        I'm always happy to chat about new projects or opportunities. Feel free
-        to reach out to me. I'll get back to you as soon as I can.
-      </p>
+      <div className="flex flex-col gap-6 p-20 shadow-input">
+        <h2 className="text-4xl font-bold text-neutral-200">Let's Connect</h2>
+        <p className="max-w-xl text-lg text-neutral-300">
+          I'm always happy to chat about new projects or opportunities. Feel
+          free to reach out to me. I'll get back to you as soon as I can.
+        </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col mb-4 space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-          <LabelInputContainer>
-            <label htmlFor="firstname">First name</label>
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+          <div className="flex gap-4">
+            <LabelInputContainer>
+              <label htmlFor="firstname">First name</label>
+              <Input
+                id="firstname"
+                name="firstname"
+                value={formData.firstname}
+                onChange={handleChange}
+                placeholder="John"
+                type="text"
+              />
+            </LabelInputContainer>
+            <LabelInputContainer>
+              <label htmlFor="lastname">Last name</label>
+              <Input
+                id="lastname"
+                name="lastname"
+                value={formData.lastname}
+                onChange={handleChange}
+                placeholder="Doe"
+                type="text"
+              />
+            </LabelInputContainer>
+          </div>
+          <LabelInputContainer className="">
+            <label htmlFor="email">Email Address</label>
             <Input
-              id="firstname"
-              name="firstname"
-              value={formData.firstname}
+              id="email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
-              placeholder="John"
-              type="text"
+              placeholder="johndoe@email.com"
+              type="email"
             />
           </LabelInputContainer>
-          <LabelInputContainer>
-            <label htmlFor="lastname">Last name</label>
+          <LabelInputContainer className="">
+            <label htmlFor="content">Content</label>
             <Input
-              id="lastname"
-              name="lastname"
-              value={formData.lastname}
+              id="content"
+              name="content"
+              value={formData.content}
               onChange={handleChange}
-              placeholder="Doe"
+              placeholder="Your message here..."
               type="text"
+              multiline
             />
           </LabelInputContainer>
-        </div>
-        <LabelInputContainer className="mb-4">
-          <label htmlFor="email">Email Address</label>
-          <Input
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="johndoe@email.com"
-            type="email"
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <label htmlFor="content">Content</label>
-          <Input
-            id="content"
-            name="content"
-            value={formData.content}
-            onChange={handleChange}
-            placeholder="Your message here..."
-            type="text"
-            multiline
-          />
-        </LabelInputContainer>
 
-        <button
-          className="text-lg bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900 block bg-zinc-700 w-full text-white rounded-md h-12 font-medium  shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Drop a message &rarr;
-          <BottomGradient />
-        </button>
+          <button
+            className="text-lg bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900 block bg-zinc-700 w-full text-white rounded-md h-12 font-medium  shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+            type="submit"
+          >
+            Drop a message &rarr;
+            <BottomGradient />
+          </button>
 
-        <div className="bg-gradient-to-r from-transparent via-[#66c6e0] to-transparent my-8 h-[1px] w-full" />
-      </form>
+          <div className="bg-gradient-to-r from-transparent via-[#66c6e0] to-transparent mt-10 h-[1px] w-full" />
+        </form>
+      </div>
     </section>
   );
 }

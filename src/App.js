@@ -7,6 +7,7 @@ import { Landing } from "./pages/Landing";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import "@fontsource/noto-serif-display";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Projects />
         <Contact />
       </div>
+      <Footer />
       <BackgroundBeams />
     </div>
   );

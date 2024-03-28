@@ -39,7 +39,7 @@ const Input = forwardRef(({ className, type, multiline, ...props }, ref) => {
         <textarea
           type={type}
           className={cn(
-            `flex h-64 w-full border-none bg-zinc-800 text-white rounded-lg px-3 py-2 text-lg placeholder-text-neutral-300 
+            `flex h-56 w-full border-none bg-zinc-800 text-white rounded-lg px-3 py-2 text-lg placeholder-text-neutral-300 
             focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-[#66c6e0] shadow-[0px_0px_1px_1px_var(--neutral-700)]
             group-hover/input:shadow-none transition duration-400 resize-none
             `,
