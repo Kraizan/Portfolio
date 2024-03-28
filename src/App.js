@@ -1,3 +1,4 @@
+import { Contact } from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import SocialMediaContainer from "./components/SocialMedia";
 import { BackgroundBeams } from "./components/ui/background-beams";
@@ -16,10 +17,11 @@ function App() {
       <Navbar />
       <SocialMediaContainer />
       <Landing />
-      <div className="flex flex-col gap-16 pl-64 pr-64 bg-transparent">
+      <div className="z-50 flex flex-col gap-16 pl-64 pr-64 bg-transparent">
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </div>
       <BackgroundBeams />
     </div>
