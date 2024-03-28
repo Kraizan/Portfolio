@@ -6,16 +6,16 @@ export function Landing() {
       id="home"
       className="relative flex flex-col items-center justify-center w-full min-h-screen antialiased rounded-md"
     >
-      <div className="max-w-2xl p-4 mx-auto">
-        <h2 className="relative z-10 max-w-lg mx-auto my-2 text-2xl font-bold text-center text-neutral-500">
+      <div className="p-4 mx-auto">
+        <h2 className="relative z-10 max-w-2xl pt-12 mx-auto my-2 text-3xl font-bold text-center text-neutral-500">
           Hi, I'm
         </h2>
-        <h1 className="relative z-10 py-3 text-3xl font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500">
-          Vanshaj
+        <h1 className="relative z-10 py-3 text-3xl font-bold text-center text-transparent md:text-9xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500">
+          VANSHAJ
           <br />
           BHATNAGAR
         </h1>
-        <p className="relative z-10 max-w-lg mx-auto my-2 font-semibold text-center text-neutral-500 text-md">
+        <p className="relative z-10 max-w-2xl mx-auto my-2 text-3xl font-semibold text-center text-neutral-500">
           Software Engineer, Full Stack Developer, Competitive Programmer, and a
           Tech Enthusiast.
         </p>

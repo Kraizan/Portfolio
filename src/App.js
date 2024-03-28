@@ -10,7 +10,7 @@ import "@fontsource/noto-serif-display";
 function App() {
   return (
     <div
-      className="bg-zinc-950"
+      className="tracking-wide bg-zinc-950"
       style={{ fontFamily: "Nono Serif Display, serif" }}
     >
       <Navbar />
