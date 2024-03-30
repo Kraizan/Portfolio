@@ -1,5 +1,3 @@
-// Contact.js
-
 import React, { useState } from "react";
 import { Input } from "../components/ui/input";
 import { cn } from "../utils/cn";
@@ -36,15 +34,17 @@ export function Contact() {
       id="contact"
       className="z-50 bg-transparent rounded-3xl border-[2px] border-[#66c6e0]"
     >
-      <div className="flex flex-col gap-6 p-20 shadow-input">
-        <h2 className="text-4xl font-bold text-neutral-200">Let's Connect</h2>
-        <p className="max-w-xl text-lg text-neutral-300">
+      <div className="flex flex-col gap-6 p-8 md:p-20 shadow-input">
+        <h2 className="text-2xl font-bold md:text-4xl text-neutral-200">
+          Let's Connect
+        </h2>
+        <p className="max-w-full text-base md:max-w-xl md:text-lg text-neutral-300">
           I'm always happy to chat about new projects or opportunities. Feel
           free to reach out to me. I'll get back to you as soon as I can.
         </p>
 
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-4 md:flex-row">
             <LabelInputContainer>
               <label htmlFor="firstname">First name</label>
               <Input
@@ -68,7 +68,7 @@ export function Contact() {
               />
             </LabelInputContainer>
           </div>
-          <LabelInputContainer className="">
+          <LabelInputContainer>
             <label htmlFor="email">Email Address</label>
             <Input
               id="email"
@@ -79,7 +79,7 @@ export function Contact() {
               type="email"
             />
           </LabelInputContainer>
-          <LabelInputContainer className="">
+          <LabelInputContainer>
             <label htmlFor="content">Content</label>
             <Input
               id="content"
@@ -93,14 +93,14 @@ export function Contact() {
           </LabelInputContainer>
 
           <button
-            className="text-lg bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900 block bg-zinc-700 w-full text-white rounded-md h-12 font-medium  shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+            className="text-base md:text-lg bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900 block bg-zinc-700 w-full text-white rounded-md h-10 md:h-12 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
             type="submit"
           >
             Drop a message &rarr;
             <BottomGradient />
           </button>
 
-          <div className="bg-gradient-to-r from-transparent via-[#66c6e0] to-transparent mt-10 h-[1px] w-full" />
+          <div className="bg-gradient-to-r from-transparent via-[#66c6e0] to-transparent mt-4 md:mt-10 h-[1px] w-full" />
         </form>
       </div>
     </section>
@@ -118,7 +118,12 @@ const BottomGradient = () => {
 
 const LabelInputContainer = ({ children, className }) => {
   return (
-    <div className={cn("flex flex-col space-y-2 w-full text-lg", className)}>
+    <div
+      className={cn(
+        "flex flex-col space-y-2 w-full text-base md:text-lg",
+        className
+      )}
+    >
       {children}
     </div>
   );

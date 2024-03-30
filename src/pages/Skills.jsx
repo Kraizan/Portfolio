@@ -38,17 +38,23 @@ function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="z-50 flex py-10 text-neutral-300">
+    <section
+      id="skills"
+      className="z-50 flex flex-col items-center py-4 lg:items-start lg:flex-row lg:py-20 text-neutral-300"
+    >
       {Object.entries(skillsByCategory)
         .sort(([categoryA], [categoryB]) => categoryB.localeCompare(categoryA))
         .map(([category, skills]) => (
-          <div key={category} className="w-full h-full py-20 text-center">
-            <h2 className="mb-16 text-4xl font-bold ">{category}</h2>
-            <motion.div className="flex flex-wrap justify-center gap-12">
+          <div
+            key={category}
+            className="w-full max-w-xl py-4 text-center lg:py-0"
+          >
+            <h2 className="mb-8 text-2xl font-bold lg:text-4xl">{category}</h2>
+            <motion.div className="flex flex-wrap justify-center gap-4 lg:gap-12">
               {skills.map((skill) => (
                 <motion.div
                   key={skill.$id}
-                  className="flex flex-col items-center gap-2 group"
+                  className="flex flex-col items-center h-auto gap-2 lg:h-32 group"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false }} // Animate only once when in view
@@ -64,10 +70,10 @@ function Skills() {
                     <img
                       src={skill.icon}
                       alt={skill.name}
-                      className="w-16 p-3 rounded-full bg-neutral-200"
+                      className="w-10 p-2 rounded-full lg:w-16 bg-neutral-200"
                     />
                   </div>
-                  <motion.h1 className="text-lg font-bold group-hover:text-[#66c6e0] w-28">
+                  <motion.h1 className="text-sm lg:text-lg font-bold group-hover:text-[#66c6e0] w-20 lg:w-28">
                     {skill.name}
                   </motion.h1>
                 </motion.div>

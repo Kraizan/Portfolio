@@ -18,7 +18,7 @@ function App() {
       <Navbar />
       <SocialMediaContainer />
       <Landing />
-      <div className="z-50 flex flex-col gap-16 pl-64 pr-64 bg-transparent">
+      <div className="z-50 flex flex-col gap-16 px-4 bg-transparent lg:pr-64 lg:pl-64">
         <About />
         <Skills />
         <Projects />

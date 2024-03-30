@@ -5,7 +5,7 @@ export function AnimatedPin({ ...props }) {
   return (
     <div className="items-center">
       <PinContainer title={props.title} href={props.link}>
-        <div className="flex basis-full flex-col p-4 sm:basis-1/2 w-[20rem] h-[20rem] lg:w-[22rem] lg:h-[25rem]">
+        <div className="flex basis-full flex-col p-4 w-72 h-80 lg:w-[22rem] lg:h-[25rem]">
           <h3 className="!pb-2 !m-0 font-bold text-lg lg:text-2xl text-neutral-200">
             {props.title}
           </h3>

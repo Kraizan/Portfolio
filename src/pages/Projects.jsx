@@ -24,7 +24,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="flex py-10 text-center">
-      <div className="flex flex-wrap justify-between gap-12">
+      <div className="flex flex-col justify-center w-full lg:justify-between lg:flex-wrap lg:gap-10 lg:flex-row">
         {projects.map((project) => (
           <ProjectItem key={project.$id} project={project} />
         ))}
