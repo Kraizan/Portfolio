@@ -14,7 +14,7 @@ export function Contact() {
     e.preventDefault();
     try {
       alert(
-        "The email service is not yet implemented. Kindly reach out to me via LinkedIn or Email. Thank you!"
+        "The contact service is not yet implemented. Kindly reach out to me via LinkedIn or Email. Thank you!"
       );
     } catch (error) {
       console.error("Error sending email:", error);
