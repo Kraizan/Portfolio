@@ -14,7 +14,7 @@ const HamburgerMenu = () => {
   return (
     <div className="fixed top-0 left-0 z-[200] w-full bg-transparent lg:hidden">
       <button
-        className="fixed z-[200] p-8 text-white transition-all duration-300"
+        className="fixed z-[200] w-full bg-zinc-950 backdrop-blur-sm bg-opacity-80 p-4 text-white transition-all duration-300"
         onClick={toggleMenu}
       >
         <LuMenu className="w-8 h-8" />
