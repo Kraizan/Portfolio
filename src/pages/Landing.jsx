@@ -7,7 +7,7 @@ export function Landing() {
       className="relative flex flex-col items-center justify-center w-full min-h-screen antialiased rounded-md"
     >
       <div className="p-4 mx-auto">
-        <h2 className="relative z-10 max-w-2xl pt-12 mx-auto my-2 font-bold text-center text-md lg:text-3xl text-neutral-500">
+        <h2 className="relative z-10 max-w-2xl mx-auto my-2 font-bold text-center lg:pt-12 text-md lg:text-3xl text-neutral-500">
           Hi, I'm
         </h2>
         <h1 className="relative z-10 py-3 text-5xl font-bold text-center text-transparent lg:text-9xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500">

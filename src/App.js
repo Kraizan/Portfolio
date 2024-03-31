@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import "@fontsource/noto-serif-display";
 import Footer from "./components/Footer";
+import HamburgerMenu from "./components/Hamburger";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       style={{ fontFamily: "Nono Serif Display, serif" }}
     >
       <Navbar />
+      <HamburgerMenu />
       <SocialMediaContainer />
       <Landing />
       <div className="z-50 flex flex-col gap-16 px-4 bg-transparent lg:pr-64 lg:pl-64">
